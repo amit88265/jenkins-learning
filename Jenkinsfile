@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven 'gradle_8_7'
+        gradle 'gradle_8_7'
     }
     stages{
         stage('Build'){
