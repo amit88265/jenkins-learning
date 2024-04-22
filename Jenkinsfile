@@ -4,10 +4,10 @@ pipeline {
         maven 'maven_3_9_6'
     }
     stages{
-        stage('Build Maven'){
+        stage('gradle_8_7'){
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/amit88265/jenkins-learning']]])
-                sh 'mvn clean install'
+                sh 'gradle clean build'
             }
         }
 
