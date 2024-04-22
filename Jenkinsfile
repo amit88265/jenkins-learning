@@ -10,13 +10,13 @@ pipeline {
                 sh 'gradle clean build'
             }
         }
-//         stage('Build docker image'){
-//             steps{
-//                 script{
-//                     sh 'docker build -t javatechie/devops-integration .'
-//                 }
-//             }
-//         }
+        stage('Build docker image'){
+            steps{
+                script{
+                    sh 'docker build -t jenkins-learning .'
+                }
+            }
+        }
 //         stage('Push image to Hub'){
 //             steps{
 //                 script{
@@ -25,13 +25,6 @@ pipeline {
 //
 // }
 //                    sh 'docker push javatechie/devops-integration'
-//                 }
-//             }
-//         }
-//         stage('Deploy to k8s'){
-//             steps{
-//                 script{
-//                     kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8sconfigpwd')
 //                 }
 //             }
 //         }
