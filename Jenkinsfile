@@ -10,7 +10,6 @@ pipeline {
                 sh 'gradle clean build'
             }
         }
-
 //         stage('Build docker image'){
 //             steps{
 //                 script{
