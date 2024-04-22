@@ -1,10 +1,10 @@
 pipeline {
     agent any
     tools{
-        maven 'maven_3_9_6'
+        maven 'gradle_8_7'
     }
     stages{
-        stage('gradle_8_7'){
+        stage('Build'){
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/amit88265/jenkins-learning']]])
                 sh 'gradle clean build'
