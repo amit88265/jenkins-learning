@@ -1,5 +1,5 @@
 # Use a base image with Java and Alpine Linux
-FROM adoptopenjdk/openjdk17:alpine
+FROM openjdk:17-jdk-slim
 # Set the working directory inside the container
 WORKDIR /app
 
