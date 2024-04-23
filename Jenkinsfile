@@ -14,7 +14,7 @@ pipeline {
             steps{
                 script{
                     sh 'docker build -t jenkins-learning .'
-                    sh 'docker run -d jenkins-learning'
+                    sh 'docker run -p 7878:7878 -d jenkins-learning'
                 }
             }
         }
